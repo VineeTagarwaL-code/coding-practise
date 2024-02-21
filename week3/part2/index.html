@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>Replit</title>
+    </head>
+    <body>
+     
+        <script>
+           async function getAnimalData(){
+         const response = await   fetch("https://fakerapi.it/api/v1/persons")
+         const finalRes = await response.json()
+         console.log(finalRes)
+         document.getElementById("container").innerHTML = JSON.stringify(finalRes.data);
+            }
+        </script>
+        <button onClick="getAnimalData()">Get data</button>
+        <div id="container"></div>
+    </body>
+</html>
+
+<!-- https://fakerapi.it/api/v1/persons -->
